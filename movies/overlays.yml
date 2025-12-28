@@ -1,7 +1,4 @@
 overlays:
-  # ==========================================
-  #            RESOLUTIONS (Top-Left)
-  # ==========================================
   4K-UHD:
     plex_search:
       resolution: 4k
@@ -16,9 +13,6 @@ overlays:
     horizontal_align: left
     vertical_align: top
 
-  # ==========================================
-  #           VIDEO FORMAT (Top-Right)
-  # ==========================================
   Dolby Vision:
     filters:
       video_codec: dovi
@@ -35,9 +29,6 @@ overlays:
     horizontal_align: right
     vertical_align: top
 
-  # ==========================================
-  #           SOURCE (Bottom-Center)
-  # ==========================================
   Source-Remux:
     plex_search:
       any:
@@ -56,9 +47,6 @@ overlays:
     horizontal_align: center
     vertical_align: bottom
 
-  # ==========================================
-  #           STUDIOS (Bottom-Right)
-  # ==========================================
   Studio-A24:
     plex_search:
       studio: A24
