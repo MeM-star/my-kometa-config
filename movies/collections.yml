@@ -134,7 +134,7 @@ collections:
   Sundance Grand Jury Prize:
     imdb_award:
       event_id: ev0000631
-      category_filter: Grand Jury Prize: Dramatic
+      category_filter: "Grand Jury Prize: Dramatic"
     summary: "Winners of the Grand Jury Prize at Sundance."
     url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Sundance.jpg
     sync_mode: sync
