@@ -21,7 +21,7 @@ overlays:
   # ==========================================
   Dolby Vision:
     filters:
-      video_codecs: dooovi
+      video_codec: dovi
     url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/audio/Dolby%20Vision.png
     horizontal_align: right
     vertical_align: top
@@ -30,7 +30,7 @@ overlays:
     plex_search:
       hdr: true
     filters:
-      video_codecs.not: dooovi
+      video_codec.not: dovi
     url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/audio/HDR.png
     horizontal_align: right
     vertical_align: top
