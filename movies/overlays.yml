@@ -1,0 +1,130 @@
+overlays:
+  # ==========================================
+  #            RESOLUTIONS (Top-Left)
+  # ==========================================
+  4K-UHD:
+    plex_search:
+      resolution: 4k
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/resolution/4k.png
+    horizontal_align: left
+    vertical_align: top
+
+  1080p-HD:
+    plex_search:
+      resolution: 1080p
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/resolution/1080p.png
+    horizontal_align: left
+    vertical_align: top
+
+  # ==========================================
+  #           VIDEO FORMAT (Top-Right)
+  # ==========================================
+  Dolby Vision:
+    filters:
+      video_codecs: dooovi
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/audio/Dolby%20Vision.png
+    horizontal_align: right
+    vertical_align: top
+
+  HDR:
+    plex_search:
+      hdr: true
+    filters:
+      video_codecs.not: dooovi
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/audio/HDR.png
+    horizontal_align: right
+    vertical_align: top
+
+  # ==========================================
+  #           SOURCE (Bottom-Center)
+  # ==========================================
+  Source-Remux:
+    plex_search:
+      any:
+        file_matches: regex:(?i)remux
+        edition_title.regex: (?i)remux
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/video_format/remux.png
+    horizontal_align: center
+    vertical_align: bottom
+
+  Source-Web:
+    plex_search:
+      any:
+        file_matches: regex:(?i)web[-_. ]?(dl|rip)
+        edition_title.regex: (?i)web[-_. ]?(dl|rip)
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/video_format/web.png
+    horizontal_align: center
+    vertical_align: bottom
+
+  # ==========================================
+  #           STUDIOS (Bottom-Right)
+  # ==========================================
+  Studio-A24:
+    plex_search:
+      studio: A24
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/A24.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-WarnerBros:
+    plex_search:
+      studio: Warner Bros
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Warner%20Bros.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-Universal:
+    plex_search:
+      studio: Universal
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Universal.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-Paramount:
+    plex_search:
+      studio: Paramount
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Paramount.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-Sony:
+    plex_search:
+      studio: Sony Pictures
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Sony.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-Disney:
+    plex_search:
+      studio: Walt Disney Pictures
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Disney.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-20thCentury:
+    plex_search:
+      studio: 20th Century Studios
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/20th%20Century%20Studios.png
+    horizontal_align: right
+    vertical_align: bottom
+
+  Studio-Lionsgate:
+    plex_search:
+      studio: Lionsgate
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Lionsgate.png
+    horizontal_align: right
+    vertical_align: bottom
+    
+  Studio-MGM:
+    plex_search:
+      studio: MGM
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/MGM.png
+    horizontal_align: right
+    vertical_align: bottom
+    
+  Studio-Dreamworks:
+    plex_search:
+      studio: Dreamworks
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/studio/Dreamworks.png
+    horizontal_align: right
+    vertical_align: bottom
