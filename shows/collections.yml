@@ -1,0 +1,12 @@
+collections:
+  Popular Shows:
+    tmdb_popular: 40
+    summary: "The most popular TV Shows right now."
+    sync_mode: sync
+    collection_order: custom
+
+  Trending Shows:
+    trakt_trending: 30
+    summary: "TV Shows trending on Trakt in the last 30 days."
+    sync_mode: sync
+    limit: 50
