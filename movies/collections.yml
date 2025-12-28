@@ -9,12 +9,14 @@ collections:
     sync_mode: sync
     url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Letterboxd%20Top%20250.jpg
 
-  Letterboxd Popular:
-    letterboxd_list: https://letterboxd.com/films/popular/
+ Letterboxd Popular:
+    # We change this to a block so we can limit the DOWNLOAD
+    letterboxd_list:
+      url: https://letterboxd.com/films/popular/
+      limit: 100
     summary: "The most popular films on Letterboxd right now."
     collection_order: custom
     sync_mode: sync
-    limit: 100
     url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Letterboxd%20Popular.jpg
 
   # ==========================================
