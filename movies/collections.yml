@@ -2,6 +2,7 @@ collections:
   # ==========================================
   #             LETTERBOXD CHARTS (NEW)
   # ==========================================
+ collections:
   Letterboxd Top 250:
     letterboxd_list: https://letterboxd.com/dave/list/official-top-250-narrative-feature-films/
     summary: "The official Top 250 Narrative Feature Films on Letterboxd."
@@ -9,8 +10,7 @@ collections:
     sync_mode: sync
     url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Letterboxd%20Top%20250.jpg
 
- Letterboxd Popular:
-    # We change this to a block so we can limit the DOWNLOAD
+  Letterboxd Popular:
     letterboxd_list:
       url: https://letterboxd.com/films/popular/
       limit: 100
