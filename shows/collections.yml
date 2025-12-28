@@ -1,12 +1,107 @@
 collections:
+  # ==========================================
+  #                 CHARTS
+  # ==========================================
+  IMDb Top 250 TV:
+    imdb_list: https://www.imdb.com/chart/toptv
+    summary: "The Top 250 TV Shows of all time."
+    collection_order: custom
+    sync_mode: sync
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/IMDb%20Top%20250.jpg
+
   Popular Shows:
     tmdb_popular: 40
     summary: "The most popular TV Shows right now."
     sync_mode: sync
     collection_order: custom
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Popular.jpg
 
   Trending Shows:
     trakt_trending: 30
     summary: "TV Shows trending on Trakt in the last 30 days."
     sync_mode: sync
     limit: 50
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Trending.jpg
+
+  Most Watched (All Time):
+    trakt_list: https://trakt.tv/shows/watched/all
+    summary: "The most watched TV Shows of all time on Trakt."
+    sync_mode: sync
+    limit: 50
+    collection_order: custom
+
+  # ==========================================
+  #                 PEOPLE
+  # ==========================================
+  Top TV Actors:
+    type: tmdb_person
+    summary: "TV Shows featuring this actor."
+    limit: 20
+    data:
+      actor_depth: 3
+      sort_by: popularity.desc
+    template:
+      simple_show_actor:
+        url_poster: tmdb
+
+  # ==========================================
+  #                 AWARDS
+  # ==========================================
+  # --- EMMYS (Primetime) ---
+  Emmy Outstanding Drama:
+    imdb_award:
+      event_id: ev0000223
+      category_filter: Outstanding Drama Series
+    summary: "Winners of the Primetime Emmy for Outstanding Drama."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Emmys.jpg
+    sync_mode: sync
+
+  Emmy Outstanding Comedy:
+    imdb_award:
+      event_id: ev0000223
+      category_filter: Outstanding Comedy Series
+    summary: "Winners of the Primetime Emmy for Outstanding Comedy."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Emmys.jpg
+    sync_mode: sync
+
+  # --- GOLDEN GLOBES (TV) ---
+  Golden Globe Best TV Drama:
+    imdb_award:
+      event_id: ev0000292
+      category_filter: Best Television Series - Drama
+    summary: "Winners of the Golden Globe for Best TV Drama."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Golden%20Globes.jpg
+    sync_mode: sync
+
+  Golden Globe Best TV Comedy:
+    imdb_award:
+      event_id: ev0000292
+      category_filter: Best Television Series - Musical or Comedy
+    summary: "Winners of the Golden Globe for Best TV Comedy."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Golden%20Globes.jpg
+    sync_mode: sync
+
+  # --- SAG (TV) ---
+  SAG Outstanding Ensemble Drama:
+    imdb_award:
+      event_id: ev0000589
+      category_filter: Outstanding Performance by an Ensemble in a Drama Series
+    summary: "Winners of the SAG Award for Outstanding Drama Ensemble."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/SAG.jpg
+    sync_mode: sync
+
+  # --- CRITICS CHOICE (TV) ---
+  Critics Choice Best Drama Series:
+    imdb_award:
+      event_id: ev0000133
+      category_filter: Best Drama Series
+    summary: "Winners of the Critics Choice Award for Best Drama Series."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Critics%20Choice.jpg
+    sync_mode: sync
+
+# --- TEMPLATES (Do not delete) ---
+templates:
+  simple_show_actor:
+    sort_by: release.desc
+    collection_order: release
+    sync_mode: sync
