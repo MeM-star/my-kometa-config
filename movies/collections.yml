@@ -1,4 +1,25 @@
 collections:
+  # ==========================================
+  #             LETTERBOXD CHARTS (NEW)
+  # ==========================================
+  Letterboxd Top 250:
+    letterboxd_list: https://letterboxd.com/dave/list/official-top-250-narrative-feature-films/
+    summary: "The official Top 250 Narrative Feature Films on Letterboxd."
+    collection_order: custom
+    sync_mode: sync
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Letterboxd%20Top%20250.jpg
+
+  Letterboxd Popular:
+    letterboxd_list: https://letterboxd.com/films/popular/
+    summary: "The most popular films on Letterboxd right now."
+    collection_order: custom
+    sync_mode: sync
+    limit: 100
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Letterboxd%20Popular.jpg
+
+  # ==========================================
+  #                 STANDARD CHARTS
+  # ==========================================
   IMDb Top 250:
     imdb_list: https://www.imdb.com/chart/top
     summary: "The Top 250 Movies of all time."
@@ -12,3 +33,124 @@ collections:
     collection_order: custom
     sync_mode: sync
     limit: 100
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Trending.jpg
+
+  Popular Movies:
+    tmdb_popular: 30
+    summary: "The most popular movies right now."
+    collection_order: custom
+    sync_mode: sync
+    limit: 100
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/Popular.jpg
+
+  # ==========================================
+  #                 PEOPLE
+  # ==========================================
+  Top Actors:
+    type: tmdb_person
+    summary: "Movies featuring this actor."
+    limit: 20
+    data:
+      actor_depth: 3
+      sort_by: popularity.desc
+    template:
+      simple_actor_collection:
+        url_poster: tmdb
+
+  # ==========================================
+  #                 AWARDS
+  # ==========================================
+  # --- OSCARS (Academy Awards) ---
+  Oscars Best Picture Winners:
+    imdb_award:
+      event_id: ev0000003
+      category_filter: Best Motion Picture of the Year
+    summary: "Winners of the Academy Award for Best Picture."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Oscars.jpg
+    sync_mode: sync
+
+  Oscars Best Director Winners:
+    imdb_award:
+      event_id: ev0000003
+      category_filter: Best Achievement in Directing
+    summary: "Winners of the Academy Award for Best Director."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Oscars.jpg
+    sync_mode: sync
+
+  # --- GOLDEN GLOBES ---
+  Golden Globe Best Drama:
+    imdb_award:
+      event_id: ev0000292
+      category_filter: Best Motion Picture - Drama
+    summary: "Winners of the Golden Globe for Best Drama."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Golden%20Globes.jpg
+    sync_mode: sync
+
+  Golden Globe Best Comedy/Musical:
+    imdb_award:
+      event_id: ev0000292
+      category_filter: Best Motion Picture - Musical or Comedy
+    summary: "Winners of the Golden Globe for Best Comedy or Musical."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Golden%20Globes.jpg
+    sync_mode: sync
+
+  # --- BAFTA (British) ---
+  BAFTA Best Film:
+    imdb_award:
+      event_id: ev0000123
+      category_filter: Best Film
+    summary: "Winners of the BAFTA for Best Film."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/BAFTA.jpg
+    sync_mode: sync
+
+  # --- SAG (Screen Actors Guild) ---
+  SAG Outstanding Cast:
+    imdb_award:
+      event_id: ev0000589
+      category_filter: Outstanding Performance by a Cast in a Motion Picture
+    summary: "Winners of the SAG Award for Outstanding Cast."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/SAG.jpg
+    sync_mode: sync
+
+  # --- CRITICS CHOICE ---
+  Critics Choice Best Picture:
+    imdb_award:
+      event_id: ev0000133
+      category_filter: Best Picture
+    summary: "Winners of the Critics Choice Award for Best Picture."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Critics%20Choice.jpg
+    sync_mode: sync
+
+  # --- CANNES (France) ---
+  Cannes Palme d'Or:
+    imdb_award:
+      event_id: ev0000147
+      category_filter: Palme d'Or
+    summary: "Winners of the Palme d'Or at Cannes."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Cannes.jpg
+    sync_mode: sync
+
+  # --- SUNDANCE (Indie) ---
+  Sundance Grand Jury Prize:
+    imdb_award:
+      event_id: ev0000631
+      category_filter: Grand Jury Prize: Dramatic
+    summary: "Winners of the Grand Jury Prize at Sundance."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Sundance.jpg
+    sync_mode: sync
+
+  # --- VENICE (Italy) ---
+  Venice Golden Lion:
+    imdb_award:
+      event_id: ev0000681
+      category_filter: Golden Lion
+    summary: "Winners of the Golden Lion at the Venice Film Festival."
+    url_poster: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/awards/Venice.jpg
+    sync_mode: sync
+
+# --- TEMPLATES (Do not delete) ---
+templates:
+  simple_actor_collection:
+    sort_by: release.desc
+    collection_order: release
+    sync_mode: sync
