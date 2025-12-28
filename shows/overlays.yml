@@ -1,0 +1,193 @@
+overlays:
+  # ==========================================
+  #           RESOLUTIONS (Top-Left)
+  # ==========================================
+  4K-UHD:
+    plex_search:
+      resolution: 4k
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/resolution/4k.png
+    horizontal_align: left
+    vertical_align: top
+
+  1080p-HD:
+    plex_search:
+      resolution: 1080p
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/resolution/1080p.png
+    horizontal_align: left
+    vertical_align: top
+
+  # ==========================================
+  #            SOURCE (Top-Center)
+  # ==========================================
+  # Located here to avoid crashing into the Status Ribbon at the bottom
+  Source-Remux:
+    plex_search:
+      any:
+        file_matches: regex:(?i)remux
+        edition_title.regex: (?i)remux
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/video_format/remux.png
+    horizontal_align: center
+    vertical_align: top
+
+  Source-Web:
+    plex_search:
+      any:
+        file_matches: regex:(?i)web[-_. ]?(dl|rip)
+        edition_title.regex: (?i)web[-_. ]?(dl|rip)
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/video_format/web.png
+    horizontal_align: center
+    vertical_align: top
+
+  # ==========================================
+  #           NETWORKS (Top-Right)
+  # ==========================================
+  Network-Netflix:
+    plex_search:
+      studio: Netflix
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Netflix.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-HBO:
+    plex_search:
+      studio: HBO
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/HBO.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-Disney+:
+    plex_search:
+      studio: Disney+
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Disney%2B.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-AppleTV:
+    plex_search:
+      studio: Apple TV+
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Apple%20TV%2B.png
+    horizontal_align: right
+    vertical_align: top
+    
+  Network-Amazon:
+    plex_search:
+      studio: Amazon Studios
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Amazon%20Prime.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-Hulu:
+    plex_search:
+      studio: Hulu
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Hulu.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-Peacock:
+    plex_search:
+      studio: Peacock
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Peacock.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-Paramount+:
+    plex_search:
+      studio: Paramount+
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Paramount%2B.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-AMC:
+    plex_search:
+      studio: AMC
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/AMC.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-FX:
+    plex_search:
+      studio: FX
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/FX.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-Showtime:
+    plex_search:
+      studio: Showtime
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/Showtime.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-BBC:
+    plex_search:
+      studio: BBC
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/BBC.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-CW:
+    plex_search:
+      studio: The CW
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/The%20CW.png
+    horizontal_align: right
+    vertical_align: top
+    
+  Network-ABC:
+    plex_search:
+      studio: ABC
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/ABC.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-CBS:
+    plex_search:
+      studio: CBS
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/CBS.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-NBC:
+    plex_search:
+      studio: NBC
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/NBC.png
+    horizontal_align: right
+    vertical_align: top
+
+  Network-FOX:
+    plex_search:
+      studio: FOX
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/network/FOX.png
+    horizontal_align: right
+    vertical_align: top
+
+  # ==========================================
+  #         STATUS RIBBONS (Bottom-Center)
+  # ==========================================
+  Status - Canceled:
+    plex_search:
+      any:
+        label: Canceled
+        trakt_status: canceled
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/status/canceled.png
+    horizontal_align: center
+    vertical_align: bottom
+    weight: 10
+
+  Status - Ended:
+    plex_search:
+      all:
+        status: ended
+      none:
+        label: Canceled
+        trakt_status: canceled
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/status/ended.png
+    horizontal_align: center
+    vertical_align: bottom
+    weight: 5
+
+  Status - Returning:
+    plex_search:
+      status: returning
+    url: https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/overlays/status/returning.png
+    horizontal_align: center
+    vertical_align: bottom
